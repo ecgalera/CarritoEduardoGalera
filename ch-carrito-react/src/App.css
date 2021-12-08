@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+
+/* NavBar Responsive */
+
+*{
+  margin:0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: sans-serif;
+  padding:90px 20px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+  background-color: #0769e9;
+  height: 80px;
+  position: fixed;
+  width:100%;
+  top:0;
+  left:0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+.nav-link {
   color: white;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0 40px;
+  line-height: 80px;
+} 
+
+.nav-menu{
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-menu-item{
+  font-size: 18px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.nav-toggle{
+  color:white;
+  font-size: 20px ;
+  
+}
+
+button{
+  background-color: #0769e9;
+  border-radius: 8px;
+  border-color: black;
+  display: none;
+  
+}
+
+@media(max-width: 768px){
+
+  body{
+    
+    padding:70px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .header{
+    
+    height: 60px;
+    
   }
+  
+    
+  .logo{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 60px;
+    padding: 0 20px;
+  } 
+  
+  .nav-menu{
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    background-color:#2c3e50 ;
+    position: fixed;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100%-60px);
+    overflow-y: auto;
+    left: 100%;
+  }
+  
+  .nav-menu-item{
+    font-size: 15px;
+    line-height: 70px;
+
+    
+  }
+  
+  .nav-toggle{
+    color:white;
+    font-size: 15px ;
+    
+  }
+  
+  button{
+    background-color: #0769e9;
+    border-radius: 8px;
+    border-color: black;
+    display: none;
+
+       
+  }
+
+  .nav-toggle{
+    display: block;
+  }
+
+  .nav-menu_visible{
+    left: 0;
+  }
+ 
 }
