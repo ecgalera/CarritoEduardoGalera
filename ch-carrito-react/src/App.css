@@ -10,6 +10,20 @@ body{
   font-family: sans-serif;
   padding:90px 20px 0;
 }
+.nav-menu-link:hover{
+  background-color: #034574;
+  transition: .5s;
+}
+
+.nav-menu-link{
+  padding: 8px 12px;
+  border-radius:5px;
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  
+  
+}
 
 .header{
   background-color: #0769e9;
@@ -51,6 +65,7 @@ body{
   line-height: 80px;
   text-transform: uppercase;
   width: max-content;
+  list-style: none;
 }
 
 .nav-toggle{
@@ -61,8 +76,8 @@ body{
 
 button{
   background-color: #0769e9;
-  border-radius: 8px;
-  border-color: black;
+  border-radius: 5px;
+  border-color: white;
   display: none;
   
 }
@@ -119,12 +134,14 @@ button{
   
   button{
     background-color: #0769e9;
-    border-radius: 8px;
-    border-color: black;
+    border-radius: 3px;
+    border-color: #76a1cc;
     display: none;
-
-       
+         
   }
+  /* .nav-menu-img{
+   
+  } */
 
   .nav-toggle{
     display: block;
