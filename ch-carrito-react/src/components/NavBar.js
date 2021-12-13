@@ -1,4 +1,5 @@
 import React from "react";
+import CartWidget from "./CartWidget";
 
 // const navToggle = document.querySelector(".nav-toggle")
 // const navMenu = document.querySelector(".nav-menu")
@@ -13,51 +14,48 @@ import React from "react";
 //     }
 // })
 
+
 const NavBar = ()=>{
+
     return (
-        <>       
-              
-        <header className = "header"> 
-            <nav className = "nav">
-                <a href = "https://reactjs.org" className="logo nav-link">Logo</a>
-                <button className="nav-toggle">
-                    <img src="/img/menuAmbur.png" width={30} className="nav-menu-img"/>
-                </button>
-                 <ul className = "nav-menu">
-                    <li className ="nav-menu-item nav-link">
-                        <a className="App-link nav-menu-link"
+        <div>
+        <header className='header'>
+            <nav className='nav'>
+                <a href = "https://reactjs.org" className="logo nav-link">Tienda</a>
+                            
+                <ul className='nav-menu'>
+                    <li className='nav-menu-item '> 
+                        <a className="nav-menu-link nav-link nav-menu-link_active"
                         href="https://reactjs.org"
                         target="_blank"
                         rel="noopener noreferrer">Contacto
                         </a>
-                    </li> 
-                    <li className ="nav-menu-item nav-link"> 
-                        <a className="nav-menu-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer">Clientes
-                        </a>
-                   
                     </li>
-                    <li className ="nav-menu-item nav-link">
-                        <a
-                        className="nav-menu-link"
+                    <li className='nav-menu-item '>
+                        <a className="nav-menu-link nav-link nav-menu-link_active"
+                        href="https://reactjs.org"
+                        target="_blank" rel="noopener noreferrer">Clientes
+                        </a>
+                    </li>
+                        <li className='nav-menu-item '>                    
+                        <a className="nav-menu-link nav-link nav-menu-link_active"
                         href="https://reactjs.org"
                         target="_blank"
                         rel="noopener noreferrer">Productos 
                         </a>
                     </li>
-                    <li className ="nav-menu-item nav-link">
-                        <a className="nav-menu-link"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer">Servicios 
-                        </a>
-                    </li>
                 </ul>
+
+                <CartWidget/>
+
+                <button className="nav-toggle">
+                <img src="/img/menuAmbur.png" width={30} className="nav-menu-img"/>
+                </button>
             </nav>
+
         </header>
-        </>
+
+    </div>
     )
 
 }
