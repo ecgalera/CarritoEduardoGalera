@@ -167,3 +167,16 @@ span{
 
 
 }
+
+/* ItemCount */
+
+.button-contador{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.button-contador-p{
+  margin-left: 25px;
+  margin-right: 25px;
+}
