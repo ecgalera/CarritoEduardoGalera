@@ -180,3 +180,28 @@ span{
   margin-left: 25px;
   margin-right: 25px;
 }
+
+/* Items */
+
+.items-div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+  border: #034574 solid 3px;
+  width: 200px;
+  height: 300px;
+  background-color: #83c5f7;
+}
+
+.items-picture{
+  width: 100px;
+}
+
+.items-items-list{
+   padding: 20px;
+   display: inline-block;
+  
+
+}
