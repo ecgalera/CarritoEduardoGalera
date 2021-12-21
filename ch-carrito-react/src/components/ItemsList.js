@@ -1,17 +1,49 @@
-import React from 'react'
-import Items from './Items'
+import { useEffect, useState } from "react";
+import Items from "./Items";
 
-const ItemsList = ({id, titulo, picture, descripcion, stock}) => {
 
+const ItemsList = ({productos}) => {
+
+    const[cerveza, setCerveza] = useState([]);
+
+useEffect(() => {
     
-    return (
+    const promesa = new Promise ((resolve, reject)=>{
 
-        <div className='items-items-list'>
-            
-        <Items id={id} titulo={titulo} picture={picture} descripcion={descripcion} stock={stock}></Items>
-      
+        setTimeout(() => {
+            if(productos.length>0){
+                resolve(productos)
+            }else{
+                reject("Sin datos del producto")
+            }
+        }, 2000);
+    })
+
+    promesa
+        .then(res => {setCerveza(res)})
+        .catch(err => {console.log(err)})
+    
+}, [productos])
+
+    return(
+        <>
+        <div>
+            Productos
         </div>
+        <div className="row">
+
+            {
+           cerveza.map(item => (
+            <Items key={item.id} props = {item}/>
+            ))
+            }
+
+        </div>
+        
+        </>
+
     )
+
 }
 
 export default ItemsList
