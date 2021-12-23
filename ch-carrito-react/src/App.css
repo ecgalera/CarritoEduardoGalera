@@ -187,7 +187,7 @@ span{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   padding: 4rem;
   border: #034574 solid 3px;
   width: 200px;
@@ -204,4 +204,22 @@ span{
    display: inline-block;
   
 
+}
+
+.items-div{
+  display: flex;
+  flex-direction: column;
+  font-size: small;
+  font-weight: bold;
+  
+}
+
+.row{
+  margin: 15px;
+  padding: 15px;
+}
+
+.items-div{
+  margin: 10px;
+  
 }

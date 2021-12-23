@@ -1,15 +1,22 @@
 import React from 'react'
 
 
-const Items = ({id, producto, precio}) => {
+
+const Items = ({productos}) => {
   
   return (
+    <>
+    {
     
+    productos.map(productos =>
     <div className='items-div'>
-        <p className='items-id'>Id: {id}</p>
-        <p className='items-producto'>Producto:{producto}</p>
-        <p className='items-precio'>Precio:{precio}</p>
+        <p className='items-id'>ID: {productos.id}</p>
+        <p className='items-producto'>Producto:{productos.producto}</p>
+        <p className='items-precio'>Precio:${productos.precio}</p>
     </div>
+    )
+    }
+    </>
   )
 
 }

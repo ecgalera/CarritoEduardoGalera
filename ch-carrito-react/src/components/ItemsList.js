@@ -11,8 +11,8 @@ useEffect(() => {
     const promesa = new Promise ((resolve, reject)=>{
 
         setTimeout(() => {
-            if(productos.length>0){
-                resolve(productos)
+            if(cerveza.length>0){
+                resolve(cerveza)
             }else{
                 reject("Sin datos del producto")
             }
@@ -23,24 +23,32 @@ useEffect(() => {
         .then(res => {setCerveza(res)})
         .catch(err => {console.log(err)})
     
-}, [productos])
+}, [cerveza])
 
     return(
-        <>
+
+    <>
+     
+
         <div>
             Productos
         </div>
+        
         <div className="row">
 
             {
-           cerveza.map(item => (
-            <Items key={item.id} props = {item}/>
-            ))
+           
+            <Items productos = {productos}/>
+            
+            
             }
 
         </div>
+
+       
         
-        </>
+    </>
+     
 
     )
 
