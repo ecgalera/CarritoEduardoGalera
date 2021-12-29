@@ -1,5 +1,5 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import ItemDetail from './ItemDetail'
 
 const ItemDetailContainer = () => {
@@ -39,6 +39,7 @@ const ItemDetailContainer = () => {
                     <h1>Estoy creando un ItemDetailContainer</h1>
                 
                     <ItemDetail producto={producto}/>
+                    
                 </div>
             )
 }

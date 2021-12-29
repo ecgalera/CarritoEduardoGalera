@@ -1,10 +1,12 @@
 
 import React from 'react';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
-import ItemCount from "./components/ItemCount"
+import Clientes from './components/Clientes';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import Contacto from './components/Contacto';
+import Home from "./components/Home"
 
 
 
@@ -16,7 +18,7 @@ function App() {
 
    <div className="App">
     
-        <NavBar/>
+        {/* <NavBar/>
         <br></br>
        
         <br></br>
@@ -26,7 +28,23 @@ function App() {
          <ItemListContainer/>
          <br></br>
          <br></br>
-         <ItemDetailContainer></ItemDetailContainer>
+         <ItemDetailContainer></ItemDetailContainer> */}
+        <BrowserRouter>
+               <NavBar></NavBar>
+          <Routes>
+            
+            <Route path="/" element={<Home />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/productos" element={<ItemDetailContainer />} />
+            <Route path="/clientes" element={<Clientes />} />
+            <Route path="/home" element={<Home />} />
+
+
+        </Routes>
+      </BrowserRouter>
+
+
+
 
         
     </div>

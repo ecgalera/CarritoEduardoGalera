@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import CartWidget from "./CartWidget";
 
 // const navToggle = document.querySelector(".nav-toggle")
@@ -21,28 +22,17 @@ const NavBar = ()=>{
         <div>
         <header className='header'>
             <nav className='nav'>
-                <a href = "https://reactjs.org" className="logo nav-link">Tienda</a>
+                 <Link to="home">Home</Link>
                             
                 <ul className='nav-menu'>
                     <li className='nav-menu-item '> 
-                        <a className="nav-menu-link nav-link nav-menu-link_active"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer">Contacto
-                        </a>
+                        <Link to="contacto">Contacto</Link>
                     </li>
                     <li className='nav-menu-item '>
-                        <a className="nav-menu-link nav-link nav-menu-link_active"
-                        href="https://reactjs.org"
-                        target="_blank" rel="noopener noreferrer">Clientes
-                        </a>
+                    <Link to="clientes">clientes</Link>
                     </li>
                         <li className='nav-menu-item '>                    
-                        <a className="nav-menu-link nav-link nav-menu-link_active"
-                        href="https://reactjs.org"
-                        target="_blank"
-                        rel="noopener noreferrer">Productos 
-                        </a>
+                        <Link to="productos">Productos</Link>| 
                     </li>
                 </ul>
 
