@@ -7,6 +7,7 @@ import Clientes from './components/Clientes';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Contacto from './components/Contacto';
 import Home from "./components/Home"
+import Cart from './components/Cart';
 
 
 
@@ -38,6 +39,7 @@ function App() {
             <Route path="/productos" element={<ItemDetailContainer />} />
             <Route path="/clientes" element={<Clientes />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
 
 
         </Routes>

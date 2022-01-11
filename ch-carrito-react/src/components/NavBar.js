@@ -32,7 +32,10 @@ const NavBar = ()=>{
                     <Link to="clientes">clientes</Link>
                     </li>
                         <li className='nav-menu-item '>                    
-                        <Link to="productos">Productos</Link>| 
+                        <Link to="productos">Productos</Link>
+                    </li>
+                    <li className='nav-menu-item '>                    
+                        <Link to="cart">Cart</Link> 
                     </li>
                 </ul>
 

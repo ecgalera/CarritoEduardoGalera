@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 
 
 
-const ItemCount = ({stock}) => {
+const ItemCount = ({stock, onAdded}) => {
 
     const [contador, setContador] = useState(1)
     
@@ -27,7 +27,7 @@ const ItemCount = ({stock}) => {
             <button onClick={onSubtact}>-</button>
         </div>
         <br></br>
-        <button>Agregar Carrito</button>
+        <button onClick={onAdded}>Agregar Carrito</button>
         </>
     )
 
